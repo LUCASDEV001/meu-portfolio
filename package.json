@@ -4,8 +4,11 @@
   "description": "My Personal Portfolio",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "backend": "nodemon server.js",
+    "frontend": "yarn start --prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\" ",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [
     "MERN",
@@ -24,6 +27,7 @@
     "slug": "^5.3.0"
   },
   "devDependencies": {
+    "concurrently": "^7.3.0",
     "nodemon": "^2.0.19"
   },
   "engines": {
