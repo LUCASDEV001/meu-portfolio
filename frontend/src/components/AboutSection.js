@@ -43,7 +43,7 @@ const AboutSection = () => {
           paixão pelo desenvolvimento de software desde o primeiro contato. As
           tecnologias com as quais gosto de trabalhar inclui toda a MERN stack
           (Mongo, Express, React e Node), além de ter experiências com o C#
-          (Windows Forms e ASP.NET MVC).
+          (Windows Forms e ASP.NET MVC) e desenvolvimento mobile.
         </motion.p>
         <button onClick={redirectHandler}>Contate-me</button>
       </Description>
