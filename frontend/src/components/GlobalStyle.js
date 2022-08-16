@@ -7,8 +7,15 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;        
     }
 
+     html{
+        @media (max-width: 1700px){
+            font-size: 75%;
+        }
+    }
+
     body{
         background: #1B1B1B;
+        font-family: 'Roboto', sans-serif;
         overflow-x: hidden;
         text-decoration: none;
     }
@@ -18,10 +25,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.1rem;
         cursor: pointer;
         padding: 1rem 2rem;
-        background: transparent;
-        color: #20C100;
         border: 3px solid #0087F1;
         border-radius: 5px;
+        background: transparent;
+        color: #20C100;
         transition: all 0.5s ease;
         &:hover{
             background-color: #189100;
@@ -50,14 +57,19 @@ const GlobalStyle = createGlobalStyle`
 
     span{
         font-weight: lighter;
-        color: #416CD5;
+        color: #0087F1;
     }
     
     p{
         padding: 3rem 0rem;
-        color: #CCC
+        color: #CCC;
         font-size: 1.4rem;
         line-height: 150%;
+    }
+
+    label{
+        color: black;
+        font-weight: bold;
     }
 `;
 

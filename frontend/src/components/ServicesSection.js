@@ -1,15 +1,30 @@
 import React from "react";
+
 import styled from "styled-components";
 
 // Import icons
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+
 import { faLaptopCode, faImages } from "@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { About, Description, Image } from "../styles";
+
+import { scrollReveal } from "../animation";
+
+import { useScroll } from "../hooks/useScroll";
+
+//
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Services>
+    <Services
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <Image>
         <img src="https://i.ibb.co/wgZx0Yz/MERN-Stack.png" />
       </Image>

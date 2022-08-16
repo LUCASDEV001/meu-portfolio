@@ -3,11 +3,21 @@ import React from "react";
 import styled from "styled-components";
 
 import SocialNetworkSection from "../components/SocialNetworkSection";
-import ContactForm from '../components/ContactForm'
+
+import ContactForm from "../components/ContactForm";
+
+import { motion } from "framer-motion";
+
+import { pageAnimation } from "../animation";
 
 const ContactMe = () => {
   return (
-    <ContactStyled>
+    <ContactStyled
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      variants={pageAnimation}
+    >
       <Title>
         <h2>Entre em contato</h2>
       </Title>
@@ -19,7 +29,7 @@ const ContactMe = () => {
   );
 };
 
-const ContactStyled = styled.div`
+const ContactStyled = styled(motion.div)`
   padding: 1rem 10rem;
   color: #353535;
   min-height: 90vh;

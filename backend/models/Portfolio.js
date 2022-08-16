@@ -4,23 +4,39 @@ const slug = require("slug");
 // Schema
 const { Schema } = mongoose;
 
-// Adicionando o Schema
+// Adding the Schema
 const portfolioSchema = new Schema({
   title: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   slug: {
     type: String,
     required: true,
     unique: true,
-    default: function(){return slug(this.title)}
+    default: function () {
+      return slug(this.title);
+    },
   },
   description: {
     type: String,
     required: true,
   },
+  longDescription: {
+    type: String,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+  technologies: [
+    {
+      label: String,
+      icon: String,
+      iconType: String,
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now(),
