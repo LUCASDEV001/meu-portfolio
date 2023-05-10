@@ -1,3 +1,3 @@
-Projeto de portfólio bastante legal, desenvolvido utilizando a tecnologia MERN Stack.
+Projeto de portfólio desenvolvido utilizando a tecnologia MERN Stack.
+(Passará por manutenção)
 
-Acesso: https://lucasdev001-portfolio.herokuapp.com/
